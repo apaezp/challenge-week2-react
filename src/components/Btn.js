@@ -1,10 +1,11 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
+import './Btn.css'
 
 function Btn() {
   return (
     <>
-        <Button type="submit" variant="light">Submit</Button>
+        <Button className="btn" type="submit" variant="light">Submit</Button>
 
     
     </>

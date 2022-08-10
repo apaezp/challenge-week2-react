@@ -29,16 +29,14 @@ body {
 
 .inputName {
     background-color: #000;
-    color: white;
-    margin-left: 12%;
+    color: white;    
     border-radius: 0.5em;
     margin-bottom: 0.5em;
 }
 
 .inputPassword {
     background-color: #000;
-    color: white;
-    margin-left: 6%;
+    color: white;   
     border-radius: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -46,7 +44,7 @@ body {
 .error {
     margin-top: 2%;
     color: red;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: 'Rubik Dirt', cursive;
     font-weight: 300;
     margin-left: 2%;
