@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import Input from './components/Input'
 import './App.css';
+import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+
+  const checkForm = (e) => {
+    e.preventDefault();
+
+    if (name === "" && password === "") {
+      setError(false);
+      return
+    } else {
+      setError(true);
+      setName("");
+      setPassword("");
+    }
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Input name={setName} password={setPassword} checkForm={checkForm} error={error} valueName={name} valuePass={password}/>
+    
+    </>
   );
 }
 
